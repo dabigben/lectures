@@ -182,7 +182,8 @@ math_scores
 Data frames allow us to combine many vectors of the same length into a single object.
 
 ```{r}
-students <- data.frame(student_names, math_scores, verbal_scores)
+students <- data.frame(student_names, math_scores, verbal_scores,
+                       stringsAsFactors = FALSE)
 students
 summary(students)
 ```
@@ -197,6 +198,8 @@ age <- c(18, 19, 20, 21, 22)
 students2 <- data.frame(student_names, age)
 # merge different data frames
 students3 <- merge(students, students2)
+
+
 
 students3
 ```
